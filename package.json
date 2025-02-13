@@ -3,7 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "start": "bun index.ts"
+    "start": "bun index.ts",
+    "eval": "bun evals/run.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

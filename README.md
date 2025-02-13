@@ -29,3 +29,16 @@ bun run dev
 ```
 
 - for more about experiment viewer project, check its own README.md
+
+## evals
+
+- Add eval runner `evals/run.ts` for dynamic evals execution
+- Create sample eval test file `evals/experiments/test.eval.ts`
+- Add eval command to npm scripts
+  - package.json script `"eval": "bun evals/run.ts"`
+
+```bash
+bun eval      # 🔴 error with no eval name
+bun eval lol  # 🔴 error with no such file
+bun eval test # ✅
+```
