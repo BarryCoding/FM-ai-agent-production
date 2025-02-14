@@ -51,3 +51,17 @@ bun eval test # ✅
   - Add TypeScript types `evals/type.ts` for evaluation system 
   - Implement persistent storage using lowdb
   - Include score comparison with visual feedback in the terminal
+
+### eval score
+
+- Implement ToolCallMatch scorer for validating tool usage
+  - evals/scorers.ts
+
+### eval examples
+
+- Add Reddit tool evaluation test cases
+  - Test both direct and indirect Reddit query scenarios
+
+```bash
+bun eval reddit
+```
