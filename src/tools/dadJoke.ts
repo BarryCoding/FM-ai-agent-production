@@ -11,5 +11,5 @@ export const dadJoke = async ({}) => {
 export const dadJokeTool = zodFunction({
   name: 'dad_joke',
   parameters: z.object({}),
-  description: 'get a new dad joke',
+  description: 'returns a random dad joke',
 })

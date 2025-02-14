@@ -22,5 +22,5 @@ export const generateImageTool = zodFunction({
         `prompt for the image. Be sure to consider the user's original message when making the prompt. If you are unsure, then as the user to provide more details.`
       ),
   }),
-  description: 'generate an image',
+  description: 'use this tool with a prompt to generate or take a photo of anything.',
 })

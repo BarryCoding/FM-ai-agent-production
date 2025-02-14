@@ -18,5 +18,5 @@ export const reddit = async ({}) => {
 export const redditTool = zodFunction({
   name: 'reddit',
   parameters: z.object({}),
-  description: 'get the latest top 10 NBA posts from Reddit',
+  description: 'get the latest posts from Reddit',
 })

@@ -61,9 +61,20 @@ bun eval test # ✅
 
 ### eval examples
 
-- Add Reddit tool evaluation test cases
-  - Test both direct and indirect Reddit query scenarios
+- Added new evaluation test files:
+  - dadJoke.eval.ts : Tests dad joke tool functionality
+  - generateImage.eval.ts : Tests image generation with different prompts
+  - Modified reddit.eval.ts : Removed redundant test case
+  - all.eval.ts : Tests all tools together with different scenarios
+
+- Optimized tool descriptions base on evaluation results:
+  - dadJoke.ts : Clarified description
+  - generateImage.ts : Enhanced description to include photo taking capability
+  - reddit.ts : Made description more generic for Reddit posts
 
 ```bash
 bun eval reddit
+bun eval dadJoke  
+bun eval generateImage
+bun eval all
 ```
