@@ -110,7 +110,19 @@ bun start "find me a scary movie about a vampire"
 
 ## Agent with Approval
 
-- runLLMApproval
-  - Implement **structured output** validation using Zod
-  - Add approval check function for user messages
-  - Use boolean response format for clear approval status
+runLLMApproval:
+- Implement **structured output** validation using Zod
+- Add approval check function for user messages
+- Use boolean response format for clear approval status
+
+Added image generation approval flow:
+- handleImageApprovalFlow function to manage image generation approvals
+- runAgentWithApproval function that integrates approval checks
+- Updated UI to prompt for user approval when image generation is requested
+
+```bash
+bun start "generate an image of iphone"
+bun start no
+bun start "try generate the image again" 
+bun start yes
+```

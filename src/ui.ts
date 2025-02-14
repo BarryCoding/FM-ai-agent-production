@@ -1,5 +1,6 @@
 import type { ChatCompletionMessageParam } from 'openai/resources/index.mjs'
 import ora from 'ora'
+import { generateImageTool } from './tools'
 
 export const showLoader = (text: string) => {
   const spinner = ora({ text, color: 'cyan' }).start()
@@ -39,6 +40,10 @@ export const logMessage = (message: ChatCompletionMessageParam) => {
       message.tool_calls.forEach((tool) => {
         console.log(`\n${color}[ASSISTANT]${reset}`)
         console.log(`tool: ${tool.function.name}\n`)
+
+        if (tool.function.name === generateImageTool.function.name) {
+          console.log('\nDo you approve generating an image? (yes/no)\n')
+        }
       })
       return
     }
