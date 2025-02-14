@@ -95,3 +95,15 @@ bun eval all
   - Store movie metadata and generate embeddings
   - Add visual progress feedback for ingestion process
   - Run script `bun ingest`
+
+### movie search
+
+- Add RAG-based movie query `query.ts` functionality
+  - Implement vector database querying system
+- Create movie search tool `movieSearch.ts` with filtering capabilities
+  - Integrate movie search into tools framework
+
+```bash
+rm db.json
+bun start "find me a scary movie about a vampire"
+```

@@ -1,7 +1,16 @@
 import type OpenAI from 'openai'
 import { zodFunction } from 'openai/helpers/zod'
 import { z } from 'zod'
-import { dadJoke, dadJokeTool, generateImage, generateImageTool, reddit, redditTool } from './tools'
+import {
+  dadJoke,
+  dadJokeTool,
+  generateImage,
+  generateImageTool,
+  movieSearch,
+  movieSearchTool,
+  reddit,
+  redditTool,
+} from './tools'
 
 // can be anything from APIs, other agent response, etc.
 const getWeather = (...args: any[]) => 'very cold. 17deg in Makati'
@@ -15,7 +24,7 @@ const weatherTool = zodFunction({
   parameters: GetWeatherParameters,
 })
 
-export const initialTools = [weatherTool, dadJokeTool, redditTool, generateImageTool]
+export const initialTools = [weatherTool, dadJokeTool, redditTool, generateImageTool, movieSearchTool]
 
 export const runTool = async (messageToolCall: OpenAI.Chat.Completions.ChatCompletionMessageToolCall) => {
   // input toolArgs types not safe!!!
@@ -32,7 +41,9 @@ export const runTool = async (messageToolCall: OpenAI.Chat.Completions.ChatCompl
     case redditTool.function.name:
       return reddit({})
     case generateImageTool.function.name:
-      return generateImage({ prompt: input.toolArgs.prompt })
+      return generateImage(input.toolArgs)
+    case movieSearchTool.function.name:
+      return movieSearch(input.toolArgs)
     default:
       return `Never run this tool: ${messageToolCall.function.name} again, or else!`
   }
