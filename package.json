@@ -13,6 +13,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "autoevals": "^0.0.119",
     "lowdb": "^7.0.1",
     "openai": "^4.83.0",
     "ora": "^8.2.0",

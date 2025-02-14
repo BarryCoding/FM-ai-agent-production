@@ -42,3 +42,12 @@ bun eval      # 🔴 error with no eval name
 bun eval lol  # 🔴 error with no such file
 bun eval test # ✅
 ```
+
+### eval tool
+
+- Add autoevals dependency
+  - `bun add autoevals`
+- Add evaluation tool `evals/evalTool.ts` with experiment tracking and scoring system
+  - Add TypeScript types `evals/type.ts` for evaluation system 
+  - Implement persistent storage using lowdb
+  - Include score comparison with visual feedback in the terminal
