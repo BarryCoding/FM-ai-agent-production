@@ -78,3 +78,20 @@ bun eval dadJoke
 bun eval generateImage
 bun eval all
 ```
+
+## RAG
+
+### Ingest movie data
+
+- login to upstash dashboard -> Vector tab -> create index
+   1. name: agent-prod, region: Ireland, embeddingModel: mixedbread, others: default
+   2. agent-prod details -> Connect .env (Copy Paste) 
+
+- Add dependencies: @upstash/vector and csv-parse
+  - `bun add @upstash/vector csv-parse`
+- Add movie data ingestion script `ingest.ts` using Upstash vector database
+  - Prepare IMDB movie dataset
+  - Read and Parse IMDB movie dataset from CSV
+  - Store movie metadata and generate embeddings
+  - Add visual progress feedback for ingestion process
+  - Run script `bun ingest`

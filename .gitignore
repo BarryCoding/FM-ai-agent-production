@@ -177,3 +177,4 @@ dist
 # others local files
 db.json
 results.json
+*.csv
