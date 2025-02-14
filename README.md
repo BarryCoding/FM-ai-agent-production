@@ -29,6 +29,8 @@ bun run dev
 ```
 
 - for more about experiment viewer project, check its own README.md
+- make this frontend to be a sub repo of this repo
+- `bun view`
 
 ## evals
 

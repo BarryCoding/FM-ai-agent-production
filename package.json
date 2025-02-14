@@ -4,8 +4,12 @@
   "type": "module",
   "scripts": {
     "start": "bun index.ts",
-    "eval": "bun evals/run.ts"
+    "eval": "bun evals/run.ts",
+    "view": "bun --filter 'experiment-viewer' dev"
   },
+  "workspaces": [
+    "experiment-viewer"
+  ],
   "devDependencies": {
     "@types/bun": "latest"
   },
