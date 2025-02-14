@@ -107,3 +107,10 @@ bun eval all
 rm db.json
 bun start "find me a scary movie about a vampire"
 ```
+
+## Agent with Approval
+
+- runLLMApproval
+  - Implement **structured output** validation using Zod
+  - Add approval check function for user messages
+  - Use boolean response format for clear approval status
