@@ -20,10 +20,7 @@ interface Set {
   score: number
   createdAt: string
 }
-interface Experiment {
+export interface Experiment {
   name: string
   sets: Set[]
-}
-interface Results {
-  experiments: Experiment[]
 }
